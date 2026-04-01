@@ -53,6 +53,48 @@ html {
   }
 }
 
+.te-hero-float {
+  animation: te-hero-float 8s ease-in-out infinite;
+}
+
+@keyframes te-hero-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+.te-hero-rotate {
+  transform-origin: 50% 50%;
+  animation: te-hero-rotate 18s linear infinite;
+}
+
+@keyframes te-hero-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.te-hero-pulse {
+  transform-origin: 50% 50%;
+  animation: te-hero-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes te-hero-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
 .te-reveal {
   opacity: 0;
   transform: translate3d(0, 14px, 0);
@@ -96,5 +138,11 @@ html {
 
   .te-tilt:hover {
     transform: none;
+  }
+
+  .te-hero-float,
+  .te-hero-rotate,
+  .te-hero-pulse {
+    animation: none;
   }
 }
