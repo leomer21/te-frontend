@@ -29,10 +29,10 @@ export default function Home() {
               <Image
                 src="/brand/logo.png"
                 alt="TrustEngineers logo"
-                width={170}
-                height={42}
+                width={200}
+                height={49}
                 priority
-                className="h-9 w-auto"
+                className="h-11 w-auto"
               />
             </a>
 
@@ -229,9 +229,9 @@ export default function Home() {
                 <Image
                   src="/brand/logo.png"
                   alt="TrustEngineers logo"
-                  width={190}
-                  height={48}
-                  className="h-10 w-auto"
+                  width={228}
+                  height={56}
+                  className="h-12 w-auto"
                 />
               </a>
               <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">
