@@ -27,11 +27,26 @@ const team: TeamMember[] = [
   },
 ];
 
+function initials(name: string) {
+  const parts = name.trim().split(/\s+/).slice(0, 2);
+  return parts.map((p) => p[0]?.toUpperCase()).join("");
+}
+
 function PersonCard({ name, role, bio }: TeamMember) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
-      <div className="text-base font-semibold text-white">{name}</div>
-      <div className="mt-1 text-sm font-medium text-white/70">{role}</div>
+    <div className="te-tilt rounded-2xl border border-white/10 bg-black/20 p-6 transition hover:border-white/15 hover:bg-black/25">
+      <div className="flex items-start gap-4">
+        <div className="relative">
+          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-sky-500/30 via-indigo-500/20 to-fuchsia-500/30 blur-lg" />
+          <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-sm font-semibold text-white/85">
+            {initials(name)}
+          </div>
+        </div>
+        <div>
+          <div className="text-base font-semibold text-white">{name}</div>
+          <div className="mt-1 text-sm font-medium text-white/70">{role}</div>
+        </div>
+      </div>
       <p className="mt-3 text-sm leading-6 text-white/65">{bio}</p>
     </div>
   );

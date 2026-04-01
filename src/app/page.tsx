@@ -11,6 +11,8 @@ import { ValuesGrid } from "@/components/ValuesGrid";
 import { DevelopmentLifecycle } from "@/components/DevelopmentLifecycle";
 import { TeamCultureSection } from "@/components/TeamCultureSection";
 import { TeamSection } from "@/components/TeamSection";
+import { Reveal } from "@/components/Reveal";
+import { HeroVisual } from "@/components/HeroVisual";
 
 export default function Home() {
   return (
@@ -74,54 +76,61 @@ export default function Home() {
 
         <main>
           <section className="mx-auto max-w-6xl px-6 pb-10 pt-16 md:pt-24">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
-                Your long-term development partner for turning ideas into real
-                products
-              </h1>
-              <p className="mt-5 text-pretty text-base leading-7 text-white/70 md:text-lg">
-                TrustEngineers helps startups, solo founders, and growing
-                businesses build and support software with experienced
-                developers who are ready to start immediately. We focus on
-                dependable execution, clear communication, and long-term
-                collaboration.
-              </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <a
-                  href="#contact"
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(59,130,246,.18)] ring-1 ring-white/10 hover:from-sky-400 hover:to-indigo-400 sm:w-auto"
-                >
-                  Start Your Project <span className="ml-2 text-white/70">→</span>
-                </a>
-                <a
-                  href="https://cal.com/trustengineers"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 hover:bg-white/8 sm:w-auto"
-                >
-                  Book a Call
-                </a>
-              </div>
+            <div className="grid items-center gap-10 md:grid-cols-2">
+              <Reveal className="text-center md:text-left">
+                <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
+                  Your long-term development partner for turning ideas into real
+                  products
+                </h1>
+                <p className="mt-5 text-pretty text-base leading-7 text-white/70 md:text-lg">
+                  TrustEngineers helps startups, solo founders, and growing
+                  businesses build and support software with experienced
+                  developers who are ready to start immediately. We focus on
+                  dependable execution, clear communication, and long-term
+                  collaboration.
+                </p>
+                <div className="mt-8 flex flex-col items-center justify-start gap-3 sm:flex-row md:items-start">
+                  <a
+                    href="#contact"
+                    className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(59,130,246,.18)] ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:from-sky-400 hover:to-indigo-400 hover:shadow-[0_22px_70px_rgba(59,130,246,.22)] active:translate-y-0 sm:w-auto"
+                  >
+                    Start Your Project{" "}
+                    <span className="ml-2 text-white/70">→</span>
+                  </a>
+                  <a
+                    href="https://cal.com/trustengineers"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 transition hover:-translate-y-0.5 hover:bg-white/8 active:translate-y-0 sm:w-auto"
+                  >
+                    Book a Call
+                  </a>
+                </div>
 
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/60">
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400/80" />
-                  5+ years of experience
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-sky-400/80" />
-                  Ready to start immediately
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-fuchsia-400/80" />
-                  Confidentiality-first delivery
-                </span>
-              </div>
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/60 md:justify-start">
+                  <span className="inline-flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400/80" />
+                    5+ years of experience
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-sky-400/80" />
+                    Ready to start immediately
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-fuchsia-400/80" />
+                    Confidentiality-first delivery
+                  </span>
+                </div>
+              </Reveal>
+
+              <Reveal className="hidden md:block">
+                <HeroVisual />
+              </Reveal>
             </div>
           </section>
 
           <section id="about" className="mx-auto max-w-6xl px-6 py-10">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
+            <Reveal className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
               <h2 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
                 Built on trust, delivery, and long-term support
               </h2>
@@ -139,47 +148,67 @@ export default function Home() {
                   through build, iteration, and ongoing maintenance.
                 </p>
               </div>
-            </div>
+            </Reveal>
           </section>
 
           <section id="services" className="mx-auto max-w-6xl px-6 py-10">
-            <CapabilitiesTabs />
+            <Reveal>
+              <CapabilitiesTabs />
+            </Reveal>
           </section>
 
           <section id="who-we-work-with" className="mx-auto max-w-6xl px-6 py-10">
-            <IndustrySelector />
+            <Reveal>
+              <IndustrySelector />
+            </Reveal>
           </section>
 
           <section id="technologies" className="mx-auto max-w-6xl px-6 py-10">
-            <ProjectsGrid />
+            <Reveal>
+              <ProjectsGrid />
+            </Reveal>
           </section>
 
           <section id="process" className="mx-auto max-w-6xl px-6 py-10">
-            <DevelopmentLifecycle />
+            <Reveal>
+              <DevelopmentLifecycle />
+            </Reveal>
           </section>
 
           <section id="why-us" className="mx-auto max-w-6xl px-6 py-10">
-            <ValuesGrid />
+            <Reveal>
+              <ValuesGrid />
+            </Reveal>
           </section>
 
           <section id="confidentiality" className="mx-auto max-w-6xl px-6 py-10">
-            <ConfidentialitySection />
+            <Reveal>
+              <ConfidentialitySection />
+            </Reveal>
           </section>
 
           <section id="team" className="mx-auto max-w-6xl px-6 py-10">
-            <TeamSection />
+            <Reveal>
+              <TeamSection />
+            </Reveal>
           </section>
 
           <section id="culture" className="mx-auto max-w-6xl px-6 py-10">
-            <TeamCultureSection />
+            <Reveal>
+              <TeamCultureSection />
+            </Reveal>
           </section>
 
           <section id="contact" className="mx-auto max-w-6xl px-6 py-12">
-            <ContactSection />
+            <Reveal>
+              <ContactSection />
+            </Reveal>
           </section>
 
           <section id="hiring" className="mx-auto max-w-6xl px-6 pb-16 pt-0">
-            <HiringNotice />
+            <Reveal>
+              <HiringNotice />
+            </Reveal>
           </section>
         </main>
 

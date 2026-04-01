@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="40" y="50" width="1120" height="180" rx="28" fill="#070C1C" stroke="white" stroke-opacity="0.10"/>
+  <path d="M120 140 H1080" stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <g filter="url(#shadow)">
+    <g>
+      <circle cx="220" cy="140" r="34" fill="#0B122A" stroke="white" stroke-opacity="0.12"/>
+      <circle cx="220" cy="140" r="22" fill="url(#g)" opacity="0.22"/>
+      <text x="220" y="147" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="white" fill-opacity="0.85">1</text>
+    </g>
+    <g>
+      <circle cx="500" cy="140" r="34" fill="#0B122A" stroke="white" stroke-opacity="0.12"/>
+      <circle cx="500" cy="140" r="22" fill="url(#g)" opacity="0.22"/>
+      <text x="500" y="147" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="white" fill-opacity="0.85">2</text>
+    </g>
+    <g>
+      <circle cx="780" cy="140" r="34" fill="#0B122A" stroke="white" stroke-opacity="0.12"/>
+      <circle cx="780" cy="140" r="22" fill="url(#g)" opacity="0.22"/>
+      <text x="780" y="147" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="white" fill-opacity="0.85">3</text>
+    </g>
+    <g>
+      <circle cx="1060" cy="140" r="34" fill="#0B122A" stroke="white" stroke-opacity="0.12"/>
+      <circle cx="1060" cy="140" r="22" fill="url(#g)" opacity="0.22"/>
+      <text x="1060" y="147" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="white" fill-opacity="0.85">4</text>
+    </g>
+  </g>
+
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto" fill="white" fill-opacity="0.78" font-size="13">
+    <text x="220" y="205" text-anchor="middle">Discovery</text>
+    <text x="500" y="205" text-anchor="middle">Planning</text>
+    <text x="780" y="205" text-anchor="middle">Build</text>
+    <text x="1060" y="205" text-anchor="middle">Support</text>
+  </g>
+</svg>
+

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Step = {
   n: string;
   title: string;
@@ -45,11 +47,23 @@ export function DevelopmentLifecycle() {
       <div className="relative px-6 pb-6 pt-10">
         <div className="absolute inset-x-6 top-10 hidden h-[1px] bg-white/10 md:block" />
 
+        <div className="mx-auto mb-8 max-w-5xl">
+          <div className="te-tilt overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-4">
+            <Image
+              src="/visuals/process-diagram.svg"
+              alt="Process diagram showing four steps"
+              width={1200}
+              height={280}
+              className="h-auto w-full opacity-95"
+            />
+          </div>
+        </div>
+
         <div className="grid gap-4 md:grid-cols-4">
           {steps.map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl border border-white/10 bg-black/20 p-5"
+              className="te-tilt rounded-2xl border border-white/10 bg-black/20 p-5 transition hover:border-white/15 hover:bg-black/25"
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/15 text-sm font-semibold text-sky-200 ring-1 ring-sky-400/20">

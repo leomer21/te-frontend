@@ -69,7 +69,7 @@ export function ValuesGrid() {
           <div
             key={v.title}
             className={[
-              "rounded-2xl border border-white/10 bg-black/20 p-6 ring-1",
+              "rounded-2xl border border-white/10 bg-black/20 p-6 ring-1 transition hover:-translate-y-0.5 hover:border-white/15 hover:bg-black/25",
               accent(v.accent),
             ].join(" ")}
           >
