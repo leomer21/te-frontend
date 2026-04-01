@@ -73,6 +73,9 @@ function ContactCard({
 export function ContactSection() {
   const [state, setState] = useState<FormState>(defaultState);
   const [agreed, setAgreed] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [statusMessage, setStatusMessage] = useState<string>("");
 
   const mailtoHref = useMemo(() => {
     const to = "contact@trustengineers.space";
@@ -88,6 +91,46 @@ export function ContactSection() {
       subject,
     )}&body=${encodeURIComponent(body)}`;
   }, [state]);
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!agreed || isSending) return;
+
+    setIsSending(true);
+    setStatus("idle");
+    setStatusMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          ...state,
+          // honeypot
+          website: "",
+        }),
+      });
+
+      const data = (await res.json()) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        setStatus("error");
+        setStatusMessage(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setStatus("success");
+      setStatusMessage("Message sent. We’ll reply soon.");
+      setState(defaultState);
+      setAgreed(false);
+    } catch {
+      setStatus("error");
+      setStatusMessage(
+        "Could not send message right now. Please use email or WhatsApp instead.",
+      );
+    } finally {
+      setIsSending(false);
+    }
+  }
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
@@ -108,7 +151,10 @@ export function ContactSection() {
       </div>
 
       <div className="grid gap-6 p-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+        <form
+          onSubmit={onSubmit}
+          className="rounded-2xl border border-white/10 bg-black/20 p-6"
+        >
           <div className="text-sm font-semibold text-white/85">
             Contact form
           </div>
@@ -170,6 +216,11 @@ export function ContactSection() {
             </div>
           </div>
 
+          <div className="sr-only">
+            <label htmlFor="website">Website</label>
+            <input id="website" name="website" tabIndex={-1} autoComplete="off" />
+          </div>
+
           <div className="mt-5 flex items-start gap-3">
             <input
               id="agree"
@@ -184,33 +235,55 @@ export function ContactSection() {
           </div>
 
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <a
-              aria-disabled={!agreed}
-              href={agreed ? mailtoHref : undefined}
-              onClick={(e) => {
-                if (!agreed) e.preventDefault();
-              }}
+            <button
+              type="submit"
+              disabled={!agreed || isSending}
               className={[
-                "inline-flex flex-1 items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10",
-                agreed
-                  ? "bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400"
+                "inline-flex flex-1 items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10 transition",
+                agreed && !isSending
+                  ? "bg-gradient-to-r from-sky-500 to-indigo-500 hover:-translate-y-0.5 hover:from-sky-400 hover:to-indigo-400 active:translate-y-0"
                   : "cursor-not-allowed bg-white/5 text-white/40",
               ].join(" ")}
             >
-              Send message <span className="ml-2 text-white/70">→</span>
-            </a>
+              {isSending ? "Sending…" : "Send message"}{" "}
+              <span className="ml-2 text-white/70">→</span>
+            </button>
             <button
               type="button"
               onClick={() => {
                 setState(defaultState);
                 setAgreed(false);
+                setStatus("idle");
+                setStatusMessage("");
               }}
               className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white/80 hover:bg-white/8"
             >
               Reset
             </button>
           </div>
-        </div>
+
+          {status !== "idle" ? (
+            <div
+              className={[
+                "mt-4 rounded-xl border px-4 py-3 text-sm",
+                status === "success"
+                  ? "border-emerald-400/20 bg-emerald-500/10 text-emerald-100/90"
+                  : "border-rose-400/20 bg-rose-500/10 text-rose-100/90",
+              ].join(" ")}
+            >
+              {statusMessage}
+              {status === "error" ? (
+                <>
+                  {" "}
+                  <a className="underline underline-offset-4" href={mailtoHref}>
+                    Email us
+                  </a>
+                  .
+                </>
+              ) : null}
+            </div>
+          ) : null}
+        </form>
 
         <div className="space-y-4">
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
@@ -236,11 +309,11 @@ export function ContactSection() {
                 value={
                   <a
                     className="text-sky-300 hover:text-sky-200"
-                    href="https://wa.me/18648006724"
+                    href="https://wa.me/639515639379"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    +1 (864) 800-6724
+                    +63 9515639379
                   </a>
                 }
               />
