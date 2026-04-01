@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { CapabilitiesTabs } from "@/components/CapabilitiesTabs";
 import { ConfidentialitySection } from "@/components/ConfidentialitySection";
@@ -22,7 +21,11 @@ export default function Home() {
 
         <header className="sticky top-0 z-50 border-b border-white/8 bg-[#050914]/70 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <Link href="/" className="flex items-center gap-2">
+            <a
+              href="#hero"
+              className="flex items-center gap-2 outline-none ring-sky-400/40 focus-visible:ring-2"
+              aria-label="Back to top"
+            >
               <Image
                 src="/brand/logo.png"
                 alt="TrustEngineers logo"
@@ -31,7 +34,7 @@ export default function Home() {
                 priority
                 className="h-9 w-auto"
               />
-            </Link>
+            </a>
 
             <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
               <a className="hover:text-white" href="#about">
@@ -75,7 +78,10 @@ export default function Home() {
         </header>
 
         <main>
-          <section className="mx-auto max-w-6xl px-6 pb-10 pt-16 md:pt-24">
+          <section
+            id="hero"
+            className="scroll-mt-24 mx-auto max-w-6xl px-6 pb-10 pt-16 md:pt-24"
+          >
             <div className="grid items-center gap-10 md:grid-cols-2">
               <Reveal className="text-center md:text-left">
                 <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
@@ -215,7 +221,11 @@ export default function Home() {
         <footer className="border-t border-white/8 bg-black/20">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-12 md:grid-cols-3">
             <div>
-              <div className="flex items-center gap-2">
+              <a
+                href="#hero"
+                className="inline-flex items-center gap-2 outline-none ring-sky-400/40 focus-visible:ring-2"
+                aria-label="Back to top"
+              >
                 <Image
                   src="/brand/logo.png"
                   alt="TrustEngineers logo"
@@ -223,7 +233,7 @@ export default function Home() {
                   height={48}
                   className="h-10 w-auto"
                 />
-              </div>
+              </a>
               <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">
                 A long-term development partner helping startups, solo founders,
                 and businesses build and support software with experienced
