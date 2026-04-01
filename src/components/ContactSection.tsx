@@ -99,18 +99,18 @@ export function ContactSection() {
           Contact Us
         </div>
         <h2 className="mt-4 text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
-          Let’s build your AI future
+          Let’s talk about your project
         </h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-white/65 md:text-base">
-          Tell us what you’re building. We’ll reply with next steps, timelines,
-          and a clear plan.
+          If you have an idea, need development support, or are looking for a
+          long-term software partner, we’d be glad to hear from you.
         </p>
       </div>
 
       <div className="grid gap-6 p-6 md:grid-cols-2">
         <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
           <div className="text-sm font-semibold text-white/85">
-            Send us a message
+            Contact form
           </div>
 
           <div className="mt-5 grid gap-4 md:grid-cols-2">
@@ -215,7 +215,7 @@ export function ContactSection() {
         <div className="space-y-4">
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
             <div className="text-sm font-semibold text-white/85">
-              Contact information
+              Contact options
             </div>
             <div className="mt-4 grid gap-3">
               <ContactCard
@@ -231,47 +231,60 @@ export function ContactSection() {
                 }
               />
               <ContactCard
-                title="Phone"
-                subtitle="Mon–Fri, business hours"
+                title="WhatsApp"
+                subtitle="Message us anytime"
                 value={
                   <a
                     className="text-sky-300 hover:text-sky-200"
-                    href="tel:+18648006724"
+                    href="https://wa.me/18648006724"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     +1 (864) 800-6724
                   </a>
                 }
               />
               <ContactCard
-                title="Operations"
-                subtitle="Remote-first team"
-                value={<span className="text-white/75">Global</span>}
+                title="Telegram"
+                subtitle="Chat with our team"
+                value={
+                  <a
+                    className="text-sky-300 hover:text-sky-200"
+                    href="https://t.me/trustengineers"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @trustengineers
+                  </a>
+                }
+              />
+              <ContactCard
+                title="Book a call"
+                subtitle="Schedule a conversation"
+                value={
+                  <a
+                    className="text-sky-300 hover:text-sky-200"
+                    href="https://cal.com/trustengineers"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    cal.com/trustengineers
+                  </a>
+                }
               />
             </div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
-            <div className="text-sm font-semibold text-white/85">Why choose us?</div>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 ring-1 ring-emerald-400/20">
-                  <span className="text-[12px] text-emerald-300">✓</span>
-                </span>
-                Security-first engineering and clear documentation
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 ring-1 ring-emerald-400/20">
-                  <span className="text-[12px] text-emerald-300">✓</span>
-                </span>
-                Transparent communication and delivery metrics
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 ring-1 ring-emerald-400/20">
-                  <span className="text-[12px] text-emerald-300">✓</span>
-                </span>
-                Production-ready builds with observability
-              </li>
-            </ul>
+            <div className="text-sm font-semibold text-white/85">Primary contact</div>
+            <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="text-sm font-semibold text-white/85">
+                Leomer Romero
+              </div>
+              <div className="mt-2 text-sm text-white/65">
+                Ready to start immediately for the right project.
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -7,33 +7,26 @@ type Step = {
 const steps: Step[] = [
   {
     n: "1",
-    title: "Discovery & Strategy",
-    description:
-      "We align on goals, constraints, and success metrics—then map a delivery plan that reduces risk early.",
+    title: "Discovery",
+    description: "We learn about your idea, goals, timeline, and priorities.",
   },
   {
     n: "2",
-    title: "Design & Prototyping",
+    title: "Planning",
     description:
-      "UI/UX and technical prototypes validate assumptions quickly, before we invest in full build-out.",
+      "We turn requirements into a practical development path with clear direction.",
   },
   {
     n: "3",
-    title: "Agile Development",
+    title: "Build",
     description:
-      "Iterative sprints with clear demos, quality gates, and continuous integration for predictable progress.",
+      "We execute with steady progress, clear communication, and reliable technical delivery.",
   },
   {
     n: "4",
-    title: "Testing & Deployment",
+    title: "Support",
     description:
-      "Automated tests, security checks, and repeatable releases—so production is stable and observable.",
-  },
-  {
-    n: "5",
-    title: "Scale & Optimization",
-    description:
-      "We monitor performance, optimize costs, and evolve the system based on real usage and feedback.",
+      "We continue to improve, maintain, and support the product when long-term collaboration is needed.",
   },
 ];
 
@@ -42,18 +35,17 @@ export function DevelopmentLifecycle() {
     <div className="rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
       <div className="px-6 pt-6 text-center">
         <h2 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
-          Our Development Lifecycle
+          How we work
         </h2>
         <p className="mx-auto mt-3 max-w-3xl text-pretty text-sm leading-6 text-white/65 md:text-base">
-          A transparent, collaborative process designed for success—from
-          initial concept to scalable deployment.
+          A simple, practical process designed for steady progress and long-term support.
         </p>
       </div>
 
       <div className="relative px-6 pb-6 pt-10">
         <div className="absolute inset-x-6 top-10 hidden h-[1px] bg-white/10 md:block" />
 
-        <div className="grid gap-4 md:grid-cols-5">
+        <div className="grid gap-4 md:grid-cols-4">
           {steps.map((s) => (
             <div
               key={s.n}

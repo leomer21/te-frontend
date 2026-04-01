@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { CapabilitiesTabs } from "@/components/CapabilitiesTabs";
+import { ConfidentialitySection } from "@/components/ConfidentialitySection";
 import { ContactSection } from "@/components/ContactSection";
 import { IndustrySelector } from "@/components/IndustrySelector";
+import { HiringNotice } from "@/components/HiringNotice";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
-import { StatsStrip } from "@/components/StatsStrip";
 import { ValuesGrid } from "@/components/ValuesGrid";
-import { TalentGrid } from "@/components/TalentGrid";
 import { DevelopmentLifecycle } from "@/components/DevelopmentLifecycle";
+import { TeamCultureSection } from "@/components/TeamCultureSection";
+import { TeamSection } from "@/components/TeamSection";
 
 export default function Home() {
   return (
@@ -30,14 +32,17 @@ export default function Home() {
             </Link>
 
             <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+              <a className="hover:text-white" href="#about">
+                About
+              </a>
               <a className="hover:text-white" href="#services">
                 Services
               </a>
-              <a className="hover:text-white" href="#industries">
-                Industries
+              <a className="hover:text-white" href="#process">
+                Process
               </a>
-              <a className="hover:text-white" href="#work">
-                Work
+              <a className="hover:text-white" href="#team">
+                Team
               </a>
               <a className="hover:text-white" href="#why-us">
                 Why Us
@@ -50,15 +55,17 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <a
                 className="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/8 md:inline-flex"
-                href="#contact"
+                href="https://cal.com/trustengineers"
+                target="_blank"
+                rel="noreferrer"
               >
-                Join Us
+                Book a Call
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(59,130,246,.25)] ring-1 ring-white/10 hover:from-sky-400 hover:to-indigo-400"
                 href="#contact"
               >
-                Contact Us
+                Start Your Project
                 <span className="ml-2 text-white/70">→</span>
               </a>
             </div>
@@ -68,22 +75,16 @@ export default function Home() {
         <main>
           <section className="mx-auto max-w-6xl px-6 pb-10 pt-16 md:pt-24">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10">
-                  <span className="text-[10px] font-semibold">⚙</span>
-                </span>
-                Our Capabilities
-              </div>
               <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
-                Engineering the{" "}
-                <span className="bg-gradient-to-r from-sky-400 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">
-                  Future of AI
-                </span>
+                Your long-term development partner for turning ideas into real
+                products
               </h1>
               <p className="mt-5 text-pretty text-base leading-7 text-white/70 md:text-lg">
-                We build secure, scalable software and IT systems—cloud,
-                automation, and intelligent applications—so teams ship faster
-                with confidence.
+                TrustEngineers helps startups, solo founders, and growing
+                businesses build and support software with experienced
+                developers who are ready to start immediately. We focus on
+                dependable execution, clear communication, and long-term
+                collaboration.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -93,26 +94,50 @@ export default function Home() {
                   Start Your Project <span className="ml-2 text-white/70">→</span>
                 </a>
                 <a
-                  href="#work"
+                  href="https://cal.com/trustengineers"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 hover:bg-white/8 sm:w-auto"
                 >
-                  View Our Work
+                  Book a Call
                 </a>
               </div>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/60">
                 <span className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400/80" />
-                  Available 24/7
+                  5+ years of experience
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-sky-400/80" />
-                  Security-first delivery
+                  Ready to start immediately
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-fuchsia-400/80" />
-                  Free consultation
+                  Confidentiality-first delivery
                 </span>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" className="mx-auto max-w-6xl px-6 py-10">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
+              <h2 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                Built on trust, delivery, and long-term support
+              </h2>
+              <div className="mt-4 max-w-4xl space-y-4 text-sm leading-7 text-white/65 md:text-base">
+                <p>
+                  TrustEngineers is a modern software development company focused
+                  on helping clients move from idea to execution with confidence.
+                  We work with founders, businesses, and overseas partners who
+                  need reliable developers, steady progress, and a team they can
+                  trust over the long term.
+                </p>
+                <p>
+                  We are not built around one-off tasks alone. Our goal is to
+                  become a dependable development partner that supports products
+                  through build, iteration, and ongoing maintenance.
+                </p>
               </div>
             </div>
           </section>
@@ -121,19 +146,15 @@ export default function Home() {
             <CapabilitiesTabs />
           </section>
 
-          <section id="industries" className="mx-auto max-w-6xl px-6 py-10">
+          <section id="who-we-work-with" className="mx-auto max-w-6xl px-6 py-10">
             <IndustrySelector />
           </section>
 
-          <section className="mx-auto max-w-6xl px-6 py-10">
-            <StatsStrip />
-          </section>
-
-          <section id="work" className="mx-auto max-w-6xl px-6 py-10">
+          <section id="technologies" className="mx-auto max-w-6xl px-6 py-10">
             <ProjectsGrid />
           </section>
 
-          <section className="mx-auto max-w-6xl px-6 py-10">
+          <section id="process" className="mx-auto max-w-6xl px-6 py-10">
             <DevelopmentLifecycle />
           </section>
 
@@ -141,12 +162,24 @@ export default function Home() {
             <ValuesGrid />
           </section>
 
-          <section className="mx-auto max-w-6xl px-6 py-10">
-            <TalentGrid />
+          <section id="confidentiality" className="mx-auto max-w-6xl px-6 py-10">
+            <ConfidentialitySection />
+          </section>
+
+          <section id="team" className="mx-auto max-w-6xl px-6 py-10">
+            <TeamSection />
+          </section>
+
+          <section id="culture" className="mx-auto max-w-6xl px-6 py-10">
+            <TeamCultureSection />
           </section>
 
           <section id="contact" className="mx-auto max-w-6xl px-6 py-12">
             <ContactSection />
+          </section>
+
+          <section id="hiring" className="mx-auto max-w-6xl px-6 pb-16 pt-0">
+            <HiringNotice />
           </section>
         </main>
 
@@ -163,9 +196,9 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">
-                A premium engineering company building intelligent, secure SaaS,
-                automation, and custom applications for teams that demand
-                reliability.
+                A long-term development partner helping startups, solo founders,
+                and businesses build and support software with experienced
+                developers, clear communication, and trusted delivery.
               </p>
               <div className="mt-4 text-sm text-white/65">
                 <div>+1 (864) 800-6724</div>
@@ -179,18 +212,23 @@ export default function Home() {
                 </div>
                 <ul className="mt-3 space-y-2 text-sm text-white/65">
                   <li>
+                    <a className="hover:text-white" href="#about">
+                      About
+                    </a>
+                  </li>
+                  <li>
                     <a className="hover:text-white" href="#services">
                       Services
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white" href="#industries">
-                      Industries
+                    <a className="hover:text-white" href="#process">
+                      Process
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white" href="#work">
-                      Work
+                    <a className="hover:text-white" href="#team">
+                      Team
                     </a>
                   </li>
                   <li>
@@ -211,11 +249,11 @@ export default function Home() {
                   Services
                 </div>
                 <ul className="mt-3 space-y-2 text-sm text-white/65">
-                  <li>Custom Software Engineering</li>
-                  <li>AI-Powered SaaS</li>
-                  <li>Cloud & DevOps</li>
-                  <li>Data & Analytics</li>
-                  <li>Security & Compliance</li>
+                  <li>Full-Stack Development</li>
+                  <li>Frontend Development</li>
+                  <li>Backend & API Development</li>
+                  <li>AI Integration</li>
+                  <li>Maintenance & Long-Term Support</li>
                 </ul>
               </div>
 
@@ -226,7 +264,7 @@ export default function Home() {
                 <ul className="mt-3 space-y-2 text-sm text-white/65">
                   <li>
                     <a className="hover:text-white" href="#why-us">
-                      About
+                      Why TrustEngineers
                     </a>
                   </li>
                   <li>
@@ -235,13 +273,13 @@ export default function Home() {
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white" href="#contact">
-                      Privacy Policy
+                    <a className="hover:text-white" href="#confidentiality">
+                      Confidentiality
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white" href="#contact">
-                      Terms & Conditions
+                    <a className="hover:text-white" href="#hiring">
+                      Hiring notice
                     </a>
                   </li>
                 </ul>
