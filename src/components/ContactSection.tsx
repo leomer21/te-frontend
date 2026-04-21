@@ -332,6 +332,20 @@ export function ContactSection() {
                 }
               />
               <ContactCard
+                title="LinkedIn"
+                subtitle="Kafu People on LinkedIn"
+                value={
+                  <a
+                    className="text-sky-300 hover:text-sky-200"
+                    href="https://www.linkedin.com/company/kafu-people"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    linkedin.com/company/kafu-people
+                  </a>
+                }
+              />
+              <ContactCard
                 title="Book a call"
                 subtitle="Schedule a conversation"
                 value={

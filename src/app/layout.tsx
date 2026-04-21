@@ -14,23 +14,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "TrustEngineers",
-    template: "%s | TrustEngineers",
+    default: "Kafu People (formerly Trust Engineers)",
+    template: "%s | Kafu People",
   },
   description:
-    "TrustEngineers builds secure, scalable software and IT solutions—cloud, automation, and engineering services that help teams ship faster with confidence.",
-  applicationName: "TrustEngineers",
+    "Trust Engineers is now operating as Kafu People. Same team, expanded vision—visit our new official website at kafupeople.com.",
+  applicationName: "Kafu People",
   metadataBase: new URL("https://trustengineers.space/"),
   alternates: {
-    canonical: "/",
+    canonical: "https://kafupeople.com",
   },
   openGraph: {
     type: "website",
     url: "https://trustengineers.space/",
-    siteName: "TrustEngineers",
-    title: "TrustEngineers",
+    siteName: "Kafu People",
+    title: "Kafu People (formerly Trust Engineers)",
     description:
-      "Secure, scalable engineering—cloud, automation, and IT solutions built with a security-first mindset.",
+      "Same team you trust—now with a broader vision and stronger foundation. Visit kafupeople.com.",
   },
   icons: {
     icon: [{ url: "/icon.png" }],

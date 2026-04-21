@@ -19,63 +19,78 @@ export default function Home() {
       <div className="relative">
         <div className="pointer-events-none absolute inset-0 te-grid opacity-35" />
 
-        <header className="sticky top-0 z-50 border-b border-white/8 bg-[#050914]/70 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <a
-              href="#hero"
-              className="flex items-center gap-2 outline-none ring-sky-400/40 focus-visible:ring-2"
-              aria-label="Back to top"
-            >
-              <Image
-                src="/brand/logo.png"
-                alt="TrustEngineers logo"
-                width={200}
-                height={49}
-                priority
-                className="h-11 w-auto"
-              />
-            </a>
+        <div className="sticky top-0 z-50">
+          <div className="border-b border-black/15 bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-sm">
+              <div className="min-w-0 truncate font-semibold text-black/90">
+                Trust Engineers is now Kafu People — same team, expanded vision.
+              </div>
+              <a
+                className="shrink-0 rounded-lg bg-black px-3 py-1.5 text-xs font-semibold text-yellow-200 shadow-sm transition hover:bg-black/90"
+                href="https://kafupeople.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit kafupeople.com →
+              </a>
+            </div>
+          </div>
 
-            <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
-              <a className="hover:text-white" href="#about">
-                About
+          <header className="border-b border-white/8 bg-[#050914]/70 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+              <a
+                href="#hero"
+                className="flex items-center gap-2 outline-none ring-sky-400/40 focus-visible:ring-2"
+                aria-label="Back to top"
+              >
+                <Image
+                  src="/brand/logo.png"
+                  alt="Trust Engineers logo"
+                  width={200}
+                  height={49}
+                  priority
+                  className="h-11 w-auto"
+                />
               </a>
-              <a className="hover:text-white" href="#services">
-                Services
-              </a>
-              <a className="hover:text-white" href="#process">
-                Process
-              </a>
-              <a className="hover:text-white" href="#team">
-                Team
-              </a>
-              <a className="hover:text-white" href="#why-us">
-                Why Us
-              </a>
-              <a className="hover:text-white" href="#contact">
-                Contact
-              </a>
-            </nav>
+
+              <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+                <a className="hover:text-white" href="#services">
+                  Services
+                </a>
+                <a className="hover:text-white" href="#process">
+                  Process
+                </a>
+                <a className="hover:text-white" href="#team">
+                  Team
+                </a>
+                <a className="hover:text-white" href="#why-us">
+                  Why Us
+                </a>
+                <a className="hover:text-white" href="#contact">
+                  Contact
+                </a>
+              </nav>
 
             <div className="flex items-center gap-3">
               <a
                 className="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/8 md:inline-flex"
-                href="https://cal.com/trustengineers"
-                target="_blank"
-                rel="noreferrer"
+                href="#contact"
               >
-                Book a Call
+                Contact
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(59,130,246,.25)] ring-1 ring-white/10 hover:from-sky-400 hover:to-indigo-400"
-                href="#contact"
+                href="https://kafupeople.com"
+                target="_blank"
+                rel="noreferrer"
               >
-                Start Your Project
+                Visit KafuPeople.com
                 <span className="ml-2 text-white/70">→</span>
               </a>
             </div>
           </div>
         </header>
+        </div>
 
         <main>
           <section
@@ -85,47 +100,32 @@ export default function Home() {
             <div className="grid items-center gap-10 md:grid-cols-2">
               <Reveal className="text-center md:text-left">
                 <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
-                  Your long-term development partner for turning ideas into real
-                  products
+                  Kafu People (formerly Trust Engineers)
                 </h1>
                 <p className="mt-5 text-pretty text-base leading-7 text-white/70 md:text-lg">
-                  TrustEngineers helps startups, solo founders, and growing
-                  businesses build and support software with experienced
-                  developers who are ready to start immediately. We focus on
-                  dependable execution, clear communication, and long-term
-                  collaboration.
+                  We’re the same team you trust — now with a broader vision and
+                  stronger foundation.
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-start gap-3 sm:flex-row md:items-start">
                   <a
-                    href="#contact"
+                    href="https://kafupeople.com"
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(59,130,246,.18)] ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:from-sky-400 hover:to-indigo-400 hover:shadow-[0_22px_70px_rgba(59,130,246,.22)] active:translate-y-0 sm:w-auto"
                   >
-                    Start Your Project{" "}
+                    Visit KafuPeople.com{" "}
                     <span className="ml-2 text-white/70">→</span>
                   </a>
                   <a
-                    href="https://cal.com/trustengineers"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="#contact"
                     className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 transition hover:-translate-y-0.5 hover:bg-white/8 active:translate-y-0 sm:w-auto"
                   >
-                    Book a Call
+                    Contact Us
                   </a>
                 </div>
 
-                <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/60 md:justify-start">
-                  <span className="inline-flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400/80" />
-                    5+ years of experience
-                  </span>
-                  <span className="inline-flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-sky-400/80" />
-                    Ready to start immediately
-                  </span>
-                  <span className="inline-flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-fuchsia-400/80" />
-                    Confidentiality-first delivery
-                  </span>
+                <div className="mt-10 text-sm text-white/60">
+                  Trust Engineers is now Kafu People — same team, expanded vision.
                 </div>
               </Reveal>
 
@@ -135,25 +135,35 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about" className="mx-auto max-w-6xl px-6 py-10">
+          <section className="mx-auto max-w-6xl px-6 py-10">
             <Reveal className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
               <h2 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                Built on trust, delivery, and long-term support
+                We’ve evolved
               </h2>
               <div className="mt-4 max-w-4xl space-y-4 text-sm leading-7 text-white/65 md:text-base">
+                <p>Trust Engineers is now operating as Kafu People.</p>
                 <p>
-                  TrustEngineers is a modern software development company focused
-                  on helping clients move from idea to execution with confidence.
-                  We work with founders, businesses, and overseas partners who
-                  need reliable developers, steady progress, and a team they can
-                  trust over the long term.
+                  This change reflects our growth, expanded services, and
+                  long-term vision.
                 </p>
                 <p>
-                  We are not built around one-off tasks alone. Our goal is to
-                  become a dependable development partner that supports products
-                  through build, iteration, and ongoing maintenance.
+                  While our name has changed, our commitment to quality,
+                  reliability, and results remains exactly the same.
                 </p>
               </div>
+            </Reveal>
+          </section>
+
+          <section className="mx-auto max-w-6xl px-6 py-10">
+            <Reveal className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
+              <h2 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                Same team. Same values.
+              </h2>
+              <p className="mt-4 max-w-4xl text-sm leading-7 text-white/65 md:text-base">
+                You’re still working with the same people, processes, and
+                standards you’ve come to trust. Only our name has changed —
+                everything else continues to improve.
+              </p>
             </Reveal>
           </section>
 
@@ -216,6 +226,29 @@ export default function Home() {
               <HiringNotice />
             </Reveal>
           </section>
+
+          <section className="mx-auto max-w-6xl px-6 pb-16 pt-0">
+            <Reveal className="rounded-2xl border border-white/10 bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-fuchsia-500/10 px-6 py-8 shadow-[0_20px_80px_rgba(0,0,0,.35)] ring-1 ring-white/5">
+              <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+                <div>
+                  <div className="text-sm font-semibold text-white/85">
+                    Visit our new official website
+                  </div>
+                  <div className="mt-1 text-sm text-white/65">
+                    kafupeople.com
+                  </div>
+                </div>
+                <a
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:from-sky-400 hover:to-indigo-400 active:translate-y-0"
+                  href="https://kafupeople.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit KafuPeople.com <span className="ml-2 text-white/70">→</span>
+                </a>
+              </div>
+            </Reveal>
+          </section>
         </main>
 
         <footer className="border-t border-white/8 bg-black/20">
@@ -228,106 +261,104 @@ export default function Home() {
               >
                 <Image
                   src="/brand/logo.png"
-                  alt="TrustEngineers logo"
+                  alt="Trust Engineers logo"
                   width={228}
                   height={56}
                   className="h-12 w-auto"
                 />
               </a>
               <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">
-                A long-term development partner helping startups, solo founders,
-                and businesses build and support software with experienced
-                developers, clear communication, and trusted delivery.
+                Trust Engineers is now Kafu People. All services are provided
+                under kafupeople.com.
               </p>
-              <div className="mt-4 text-sm text-white/65">
-                <div>+1 (864) 800-6724</div>
-              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-10 md:col-span-2 md:grid-cols-3">
-              <div>
-                <div className="text-sm font-semibold text-white/85">
-                  Quick Links
-                </div>
-                <ul className="mt-3 space-y-2 text-sm text-white/65">
-                  <li>
-                    <a className="hover:text-white" href="#about">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#services">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#process">
-                      Process
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#team">
-                      Team
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#why-us">
-                      Why Us
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#contact">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
+            <div className="md:col-span-2">
+              <div className="text-sm font-semibold text-white/85">
+                New official website
               </div>
-
-              <div>
-                <div className="text-sm font-semibold text-white/85">
-                  Services
+              <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:gap-x-10">
+                <div>
+                  <a
+                    className="text-sm text-sky-200 hover:text-sky-100"
+                    href="https://kafupeople.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    kafupeople.com →
+                  </a>
                 </div>
-                <ul className="mt-3 space-y-2 text-sm text-white/65">
-                  <li>Full-Stack Development</li>
-                  <li>Frontend Development</li>
-                  <li>Backend & API Development</li>
-                  <li>AI Integration</li>
-                  <li>Maintenance & Long-Term Support</li>
-                </ul>
+                <div>
+                  <div className="text-xs font-medium uppercase tracking-wide text-white/55">
+                    LinkedIn
+                  </div>
+                  <a
+                    className="mt-1 block text-sm text-sky-200 hover:text-sky-100"
+                    href="https://www.linkedin.com/company/kafu-people"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Kafu People on LinkedIn →
+                  </a>
+                </div>
               </div>
-
-              <div>
-                <div className="text-sm font-semibold text-white/85">
-                  Company
+              <div className="mt-6 grid grid-cols-2 gap-10 text-sm text-white/65 md:grid-cols-3">
+                <div>
+                  <div className="text-sm font-semibold text-white/85">On this page</div>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a className="hover:text-white" href="#services">
+                        Services
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#process">
+                        Process
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#team">
+                        Team
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#contact">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="mt-3 space-y-2 text-sm text-white/65">
-                  <li>
-                    <a className="hover:text-white" href="#why-us">
-                      Why TrustEngineers
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#contact">
-                      Get in touch
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#confidentiality">
-                      Confidentiality
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white" href="#hiring">
-                      Hiring notice
-                    </a>
-                  </li>
-                </ul>
+                <div>
+                  <div className="text-sm font-semibold text-white/85">More</div>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a className="hover:text-white" href="#technologies">
+                        Technologies
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#why-us">
+                        Why us
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#confidentiality">
+                        Confidentiality
+                      </a>
+                    </li>
+                    <li>
+                      <a className="hover:text-white" href="#hiring">
+                        Hiring notice
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="mx-auto max-w-6xl px-6 pb-10 text-xs text-white/45">
-            © {new Date().getFullYear()} TrustEngineers. All rights reserved.
+            © {new Date().getFullYear()} Trust Engineers. All rights reserved.
           </div>
         </footer>
       </div>
